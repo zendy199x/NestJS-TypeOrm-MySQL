@@ -40,7 +40,7 @@ export class UserService {
   }
 
   async delete(id: string): Promise<{ result: string }> {
-    await this.userRepository.delete(id);
+    await this.userRepository.softDelete(id);
     return {
       result: 'success',
     };
